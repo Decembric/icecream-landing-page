@@ -11,6 +11,13 @@ body {
   display: block;
 }
 
+.header__icon {
+  width: 32px;
+  height: 32px;
+
+  fill: #ffffff;
+}
+
 .header-nav__list {
   list-style: none;
   display: flex;

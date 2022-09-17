@@ -41,10 +41,14 @@
 
 .products-list {
   text-align: center;
-  @include tablet {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+  &:nth-child(1) {
+    background-color: #aec6a5;
+  }
+  &:nth-child(2) {
+    background-color: #efd478;
+  }
+  &:nth-child(3) {
+    background-color: #d6936d;
   }
 }
 

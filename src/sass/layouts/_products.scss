@@ -104,7 +104,7 @@
   top: -50%;
   bottom: 50%;
   display: block;
-  transform: translateY(50%);
+  transform: translateY(42%);
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -148,6 +148,18 @@
 .product-list__btn {
 }
 .btn-icon {
+}
+
+.lining {
+  position: absolute;
+  top: -50%;
+  bottom: 50%;
+  display: block;
+  transform: translateY(50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: aqua;
 }
 
 .lining {

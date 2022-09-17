@@ -42,18 +42,18 @@
               /> </picture
           ></a>
           <button class="header__icon icon-menu is-open" data-menu-open>
-            <svg width="32">
+            <svg width="32" height="32">
               <use href="../src/images/menu.svg#menu"></use>
-            </svg>
-          </button>
-          <button class="header__icon icon-close" data-menu-close>
-            <svg width="32">
-              <use href="../src/images/close.svg#close"></use>
             </svg>
           </button>
         </div>
 
         <div class="mobile-menu is-hidden" data-menu>
+          <button class="header__icon icon-close" data-menu-close>
+            <svg width="32" height="32">
+              <use href="../src/images/close.svg#close"></use>
+            </svg>
+          </button>
           <nav class="header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__item">
@@ -126,7 +126,7 @@
           </button>
         </div>
 
-        <picture>
+        <picture class="hero__ice-cream-img">
           <source
             srcset="
               ../src/images/desktop/hero-ice-cream.png   1x,
@@ -154,7 +154,8 @@
             alt="ice-cream"
           />
         </picture>
-        <picture>
+
+        <picture class="hero__dots-img">
           <source
             srcset="
               ../src/images/desktop/hero-dots.png   1x,

@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@700&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
@@ -28,40 +41,56 @@
                 alt="logo"
               /> </picture
           ></a>
-          <svg class="header__icon icon-menu" width="32">
-            <use href="../src/images/menu.svg"></use>
-          </svg>
-          <svg class="header__icon icon-close" width="32">
-            <use href="../src/images/close.svg"></use>
-          </svg>
+          <button class="header__icon icon-menu is-open" data-menu-open>
+            <svg width="32">
+              <use href="../src/images/menu.svg#menu"></use>
+            </svg>
+          </button>
+          <button class="header__icon icon-close" data-menu-close>
+            <svg width="32">
+              <use href="../src/images/close.svg#close"></use>
+            </svg>
+          </button>
         </div>
-        <nav class="header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="">Home</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="">How it’s made?</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="">Our products</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <button type="button" class="header-button">Buy now</button>
+
+        <div class="mobile-menu is-hidden" data-menu>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="">Home</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="">How it’s made?</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="">Our products</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="button" class="header-button">Buy now</button>
+        </div>
       </div>
     </header>
 
     <section class="hero">
       <div class="container">
-        <h1>ice cream made with passion</h1>
-        <button>Products</button>
-        <button>How it’s made?</button>
-        <p>16 cafes</p>
-        <p>23 food trucks</p>
+        <div class="hero__mobile">
+          <h1 class="hero__header">
+            ice cream made with <span class="hero__header-part">passion</span>
+          </h1>
+          <div class="hero__button-list">
+            <button class="hero___button-products">Products</button>
+            <button class="hero___button-how">How it’s made?</button>
+          </div>
+        </div>
+
+        <div class="hero__side-text">
+          <p><span>16</span> cafes</p>
+          <p><span>23</span> food trucks</p>
+        </div>
 
         <div class="hero-info">
           <picture>
@@ -168,5 +197,7 @@
     <include src="./partials/modal3.html"></include>
     <include src="./partials/modal4.html"></include>
     <include src="./partials/modal5.html"></include>
+
+    <script src="../mobile-menu.js"></script>
   </body>
 </html>

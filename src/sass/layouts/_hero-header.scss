@@ -1,10 +1,12 @@
 body {
   background-color: #84a178;
+  margin: 0;
 }
 
 .mobile-header {
   display: flex;
   justify-content: space-between;
+  padding: 12px 20px;
 }
 
 .logo-header-img {
@@ -12,38 +14,114 @@ body {
 }
 
 .header__icon {
+  position: absolute;
+  top: 16px;
+  right: 20px;
   width: 32px;
   height: 32px;
 
   fill: #ffffff;
+  border: none;
+  background-color: transparent;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100px;
+  background-color: #84a178;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  @media screen and (min-width: 768px) {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+}
+
+.mobile-menu.is-hidden .mobile-menu {
+  transform: translateX(100%);
+
+  @media screen and (min-width: 768px) {
+    transform: none;
+  }
+}
+
+.mobile-menu.is-hidden .icon-close {
+  display: none;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    transform: none;
+    transition: none;
+  }
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
 }
 
 .header-nav__list {
+  margin-bottom: 111px;
+
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.header-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
 .header-nav__link {
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 39px;
+
+  text-decoration: none;
+
   display: flex;
-  align-items: center;
   text-align: center;
   color: #fcfcfc;
 
   &:hover {
     color: #131313;
   }
+
+  &:focus {
+    color: #131313;
+  }
 }
 
 .header-button {
+  width: 152px;
+  height: 42px;
   padding: 12px 34px;
   background-color: #f8d24e;
   border-radius: 10px;
+  border: none;
 
   font-family: 'Montserrat';
   font-weight: 600;
@@ -54,8 +132,136 @@ body {
   text-align: center;
 
   color: #131313;
+
+  &:hover {
+    background-color: #0a8817;
+  }
+
+  &:focus {
+    background-color: #0a8817;
+    color: #fff;
+  }
 }
 
 .header-button::after {
+  content: ' ';
   height: 12px;
+  width: 12px;
+  background-image: url(../images/button-arrow.svg#button-arrow);
+  margin-left: 8px;
+  fill: #fff;
+  cursor: pointer;
+
+  &:focus {
+    fill: #fff;
+  }
+}
+
+//HERO
+
+.hero__mobile {
+  padding-left: 20px;
+  padding-top: 49px;
+}
+
+.hero__header {
+  margin-bottom: 32px;
+
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #fcfcfc;
+}
+
+.hero__header-part {
+  font-size: 33px;
+}
+
+.hero__button-list {
+  display: flex;
+  align-items: center;
+}
+
+.hero___button-products {
+  width: 62px;
+  height: 24px;
+  margin-right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+
+  border: 2px solid #f8d24e;
+  border-radius: 8px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #131313;
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: #0a8817;
+  }
+
+  &:focus {
+    border-color: #0a8817;
+    color: #fff;
+  }
+}
+
+.hero___button-how {
+  width: 83px;
+  height: 24px;
+
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+
+  color: #f8d24e;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #0a8817;
+  }
+
+  &:focus {
+    color: #fff;
+  }
+}
+
+.hero-info {
+  display: none;
+}
+
+.hero__side-text {
+  display: none;
 }

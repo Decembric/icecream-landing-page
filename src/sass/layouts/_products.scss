@@ -46,6 +46,11 @@
     flex-wrap: wrap;
     gap: 16px;
   }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 }
 
 .product-list__item {

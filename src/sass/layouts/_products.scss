@@ -92,6 +92,24 @@
   border-radius: 50%;
   background-image: url(../images/ice-cream.jpg);
 
+  @include tablet {
+    max-width: 224px;
+    width: calc((100% - 32px) / 3);
+  }
+}
+
+.product-list__item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  bottom: 50%;
+  display: block;
+  transform: translateY(50%);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-image: url(../images/ice-cream.jpg);
+
   outline: 2px solid tomato;
 }
 

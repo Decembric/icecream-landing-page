@@ -10,6 +10,9 @@
   @include tablet {
     padding: 60px 32px 82px;
   }
+  @include desktop {
+    padding: 60px 12px;
+  }
 }
 
 .products__pre-title {
@@ -24,6 +27,13 @@
   text-transform: uppercase;
 
   color: #131313;
+
+  @include tablet{
+    font-size: 22px;
+  }
+  @include desktop{
+    font-size: 30px;
+  }
 }
 .products__title {
   margin-bottom: 148px;
@@ -37,6 +47,17 @@
   letter-spacing: 0.04em;
 
   color: #131313;
+
+  @include tablet{
+    font-size: 34px;
+    margin-bottom: 200px;
+  }
+
+  @include desktop{
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 300px;
+  }
 }
 
 .products-list {
@@ -54,26 +75,7 @@
 }
 
 .product-list__item {
-  position: relative;
-  max-width: 280px;
-  padding: 123px 40px 0 40px;
-  border-radius: 24px;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-
-  background: #aec6a5;
-
-  &:nth-child(1) {
-    background-color: #aec6a5;
-  }
-  &:nth-child(2) {
-    background-color: #efd478;
-  }
-  &:nth-child(3) {
-    background-color: #d6936d;
-  }
-}
-
-.product-list__item {
+  margin: 0 auto;
   position: relative;
   max-width: 280px;
   padding: 123px 40px 0 40px;
@@ -97,13 +99,44 @@
       margin-bottom: 164px;
     }
   }
-
+  
   @include tablet {
+    padding: 108px 26px 0;
+
     max-width: 224px;
     width: calc((100% - 32px) / 3);
   }
+  @include tablet {
+    padding: 166px 64px 0;
+
+    max-width: 370px;
+    width: calc((100% - 64px) / 3);
+  }
 }
 
+.product-list__item::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  // background-image: url(../images/ice-cream.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include desktop{
+    top: -40%;
+    height: 300px;
+    width: 300px;
+  }
+}
+
+<<<<<<< HEAD
 .product-list__item::before {
   content: '';
   position: absolute;
@@ -115,34 +148,61 @@
   height: 200px;
   width: 200px;
   border-radius: 50%;
+=======
+.product-list__item:nth-child(1):before{
+>>>>>>> a94da9b (add css)
   background-image: url(../images/ice-cream.jpg);
-
-  @include tablet {
-    max-width: 224px;
-    width: calc((100% - 32px) / 3);
+  @include retina{
+    background-image: url(../images/ice-cream-x2.jpg);
+  }
+}
+.product-list__item:nth-child(2):before{
+  background-image: url(../images/ice-coffee.jpg);
+  @include retina{
+    background-image: url(../images/ice-coffe-x2.jpg);
+  }
+}
+.product-list__item:nth-child(3):before{
+  background-image: url(../images/milkshakes.jpg);
+  @include retina{
+    background-image: url(../images/milkshakes-x2.jpg);
   }
 }
 
-.product-list__item::before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: -50%;
-  bottom: 50%;
+.lining {
   display: block;
-  transform: translateY(42%);
-  height: 200px;
+  position: absolute;
+  top: -27%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(50%);
   width: 200px;
+  height: 200px;
   border-radius: 50%;
-  background-image: url(../images/ice-cream.jpg);
+  @include desktop{
+    top: -37%;
+    height: 300px;
+    width: 300px;
+  }
+}
 
-  outline: 2px solid tomato;
+.lining--green{
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);}
+
+.lining--yellow{
+  background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+}
+
+.lining--red{
+  background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
 }
 
 .product-list__title {
   margin-bottom: 40px;
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -152,9 +212,13 @@
 
   color: #131313;
 
-  @include tablet {
-    font-size: 22px;
-    line-height: 1.23;
+@include tablet{
+  font-size: 22px;
+  line-height: 1.23;
+}
+
+  @include desktop {
+    font-size: 30px;
   }
 }
 
@@ -169,21 +233,17 @@
   letter-spacing: 0.04em;
 
   color: #131313;
+  
+@include tablet{
+  margin-bottom: 50px;
+}
+
+  @include desktop{
+    font-size: 16px;
+  }
 }
 
 .product-list__btn {
 }
 .btn-icon {
-}
-
-.lining {
-  position: absolute;
-  top: -50%;
-  bottom: 50%;
-  display: block;
-  transform: translateY(50%);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: aqua;
 }

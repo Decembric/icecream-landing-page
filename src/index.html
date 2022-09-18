@@ -70,13 +70,19 @@
               </li>
             </ul>
           </nav>
-          <button type="button" class="header-button">
+          <button type="button" class="header-button-mobile">
             Buy now
             <svg width="12" height="12" class="header__button-icon">
               <use href="../src/images/button-arrow.svg#button-arrow"></use>
             </svg>
           </button>
         </div>
+        <button type="button" class="header-button">
+          Buy now
+          <svg width="12" height="12" class="header__button-icon">
+            <use href="../src/images/button-arrow.svg#button-arrow"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -93,8 +99,8 @@
         </div>
 
         <div class="hero__side-text">
-          <p><span>16</span> cafes</p>
-          <p><span>23</span> food trucks</p>
+          <p class="hero__side-p"><div class="hero__side-text-part">16</div> cafes</p>
+          <p class="hero__side-p"><div class="hero__side-text-part">23</div> food trucks</p>
         </div>
 
         <div class="hero-info">
@@ -120,15 +126,17 @@
               alt="plate with ice-cream"
             />
           </picture>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et
-          </p>
-          <button>
-            <svg>
-              <use></use>
-            </svg>
-          </button>
+          <div class="hero-info__block">
+            <p class="hero__info-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et
+            </p>
+            <button class="hero__button-arrow">
+              <svg width="70" height="16" class="hero__icon-arrow">
+                <use href="../src/images/hero-arrow.svg#hero-arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
 
         <picture class="hero__ice-cream-img">

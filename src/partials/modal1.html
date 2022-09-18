@@ -1,83 +1,73 @@
 <!-- Backdro--------------------------------------------- -->
-    <!-- <div class="backdrop is-hidden" data-modal> -->
-      <div class="modal-ingredients">
-        <button data-modal-close type="button" class="modal-ingredients__close">
-          <svg class="modal-icon" width="20" height="20">
-            <!-- <use href="./images/icons.svg#close-modal"></use> -->
-          </svg>
-        </button>
-        <p class="modal-ingredients__title">Chololate icecream</p>
-        <div class="modal-igridients__icon">
+<!-- <div class="backdrop is-hidden" data-modal> -->
+<div class="modal-ingredients">
+  <button data-modal-close type="button" class="modal-ingredients__close">
+    <svg class="modal-icon" width="20" height="20">
+      <!-- <use href="./images/icons.svg#close-modal"></use> -->
+    </svg>
+  </button>
+  <p class="modal-ingredients__title">Chololate icecream</p>
+  <div class="modal-ingredients__icon"></div>
+  <ul class="ingredients__list list">
+    <li class="ingredients__item">
+      <span class="up"><p class="ingredients__dose">320</p></span>
+      <span class="down"> <p class="ingredients__elements">kcal</p> </span>
+    </li>
+    <li class="ingredients__item">
+      <span class="up"><p class="ingredients__dose">4g</p></span>
+      <span class="down"> <p class="ingredients__elements">Prote...</p> </span>
+    </li>
+    <li class="ingredients__item">
+      <span class="up"><p class="ingredients__dose">8,2g</p></span>
+      <span class="down"> <p class="ingredients__elements">Fats</p> </span>
+    </li>
+    <li class="ingredients__item">
+      <span class="up"><p class="ingredients__dose">40,4g</p></span>
+      <span class="down"> <p class="ingredients__elements">Carbs</p> </span>
+    </li>
+  </ul>
+  <form action="#" class="ingredients-form">
+    <div class="label-input">
+      <label for="user-name" class="input-field">
+        <span class="input-title">Имя</span></label
+      >
+      <input
+        type="text"
+        class="form-input"
+        id="user-name"
+        name="user-name"
+        placeholder="Name"
+        required
+      />
+    </div>
+    <div class="label-input">
+      <label for="user-tel" class="input-field"></label>
+      <input
+        type="tel"
+        class="form-input"
+        id="user-tel"
+        name="user-tel"
+        placeholder="Phone"
+        title="+380 (98)000-00-00"
+        required
+        pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+        minlength="13"
+        maxlength="13"
+      />
+    </div>
 
-        </div>
-        <form action="#" class="ingredients-form">
-          <div class="label-input">
-            <label for="user-name" class="input-field"> <span class="input-title">Имя</span></label>
-            
-              <input
-                type="text"
-                class="form-input"
-                id="user-name"
-                name="user-name"
-                placeholder="Name"
-                required
-              />
-        
-            
-          </div>
-          <div class="label-input">
-            <label for="user-tel" class="input-field">
-              <span class="input-title">Телефон</span></label
-            >
-            
-              <input
-                type="tel"
-                class="form-input"
-                id="user-tel"
-                name="user-tel"
-                placeholder="Phone"
-                title="+380 (98)000-00-00"
-                required
-                pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-                minlength="13"
-                maxlength="13"
-              />
-          
-          </div>
+    <div class="label-input label-comment">
+      <label for="user-comment" class="input-field"> </label>
+      <textarea
+        id="user-comment"
+        name="user-comment"
+        cols="30"
+        rows="10"
+        class="modal-comment-text"
+        placeholder="Comment"
+      ></textarea>
+    </div>
 
-          
-          <div class="label-input label-comment">
-            <label for="user-comment" class="input-field">
-              </label>
-            <textarea
-              id="user-comment"
-              name="user-comment"
-              cols="30"
-              rows="10"
-              class="modal-comment-text"
-              placeholder="Comment"
-            ></textarea>
-          </div>
-
-          <div class="input-checkbox">
-            <input
-              type="checkbox"
-              name="user-policy"
-              value="true"
-              class="input-check visually-hidden"
-              id="user-policy"
-            />
-            <label for="user-policy" class="check-text">
-              <span class="span-check">
-                <svg class="check-icon" width="11" height="8">
-                  <!-- <use href="./images/icons.svg#icon-check"></use> -->
-                </svg>
-              </span>
-              Погоджуюся з розсилкою та приймаю
-              <a href="./index.html"><span class="policy-text"> Умови договору</span></a>
-            </label>
-          </div>
-
-          <button type="submit" class="modal-button">Отправить</button>
-        </form>
-      </div>
+    <button type="submit" class="modal-button">Submit</button>
+  </form>
+</div>

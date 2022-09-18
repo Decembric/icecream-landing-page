@@ -127,7 +127,8 @@ body {
 
   @include desktop {
     padding-top: 40px;
-    padding-left: 345px;
+    width: 100%;
+    padding-right: 50px;
   }
 }
 
@@ -567,17 +568,23 @@ body {
   height: 23px;
 
   background-image: url(../images/hero-arrow.svg);
+  scale: 1;
+  transition: background-image 250ms linear;
 
   &:hover {
     background-image: url(../images/hero-arrow-hover.svg);
     width: 51px;
     height: 23px;
+    scale: 1;
+    transition: background-image 250ms linear;
   }
 
   &:focus {
     background-image: url(../images/hero-arrow-focus.svg);
     width: 52px;
     height: 23px;
+    scale: 1;
+    transition: background-image 250ms linear;
   }
 }
 

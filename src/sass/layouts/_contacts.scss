@@ -15,19 +15,15 @@
         font-size: 16px;
     }
 
-}
 
-.contacts__container {
-    position: relative;
-    max-width: 480px;
-    margin: auto;
-    margin: auto;
+
+    &__container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    }
 }
-
 .address-list {
     display: flex;
     flex-direction: column;
@@ -37,19 +33,20 @@
     @include tablet{
         flex-direction: row;
         gap: 16px;
+        margin-bottom: 60px;
     }
     @include desktop{
         gap: 32px;
+        margin-bottom: 64px;
     }
-}
 
-.address-list__item {
-    box-sizing: border-box;
+
+    &__item {
         width: 280px;
-    background: var(--main-text-color);
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
-    padding: 40px 32px;
+        background: var(--primary-white-color);
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+        padding: 40px 32px;
 
             @include tablet {
                 width: 224px;
@@ -60,23 +57,32 @@
                 width: 368px;
                 padding: 40px 40px;
             }
+    }
+
+
+    &__food-store {
+        color: var(--primary-text-color);
+        background-color: var(--hover-text-color);
+        display: inline-block;
+        border-radius: 4px;
+        padding: 0 23px;
+        margin-bottom: 20px;
+
+        text-transform: uppercase;
+        line-height: 1.86;
+        text-align: center;
+        letter-spacing: 0.04em;
+        @include tablet {
+            margin-bottom: 32px;
+        }
+            
+        @include desktop {
+            margin-bottom: 32px;
+
+        }
+
+    }
 }
-
-
-.address_list__food-store {
-    background-color: var(--hover-text-color);
-    display: inline-block;
-    border-radius: 4px;
-    padding: 0 23px;
-    margin-bottom: 20px;
-
-    text-transform: uppercase;
-    line-height: 1.86;
-    text-align: center;
-    letter-spacing: 0.04em;
-
-}
-
 .phis-address {
     color: var(--primary-text-color);
     margin-bottom: 8px;
@@ -85,55 +91,81 @@
     line-height: 186%;
     font-weight: 500;
     letter-spacing: 0.04em;
-}
+    @include tablet {
+        margin-bottom: 12px;
+        }
+            
+    @include desktop {
+        margin-bottom: 8px;
+        }
 
-.phis-address__link {
-    display: inline-block;
+    &__link {
+        display: inline-block;
 
-    line-height: 1.83;
-    letter-spacing: 0.04em;
-    text-decoration: none;
+        line-height: 1.83;
+        letter-spacing: 0.04em;
+        text-decoration: none;
 
-    color: #D6936D;
-}
+        color: #D6936D;
+    }
 
-.phis-address__link:hover,
-.phis-address__link:focus {
+    &__link:hover,
+    &__link:focus {
     text-decoration: underline;
-}
+    }
 
-.phis-address__link::after {
-    display: block;
-    content: '';
-    height: 1px;
-    background-color: #E1E1E1;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    &__link::after {
+        display: block;
+        content: '';
+        height: 1px;
+        background-color: #E1E1E1;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        
+        @include tablet {
+            margin-bottom: 32px;
+            margin-top: 32px;
+        }
+            
+        @include desktop {
+            margin-bottom: 32px;
+            margin-top: 32px;
+        }
+    }
 }
-
-.workingTime-list__item:first-child {
+.workingTime-list{
+    &__item:first-child {
     margin-bottom: 8px;
-}
 
-.workingTime-list__days,
-.workingTime-list__hours {
-    color: var(--primary-text-color);
-    line-height: 1.86;
-}
+    }
+    &__days,
+    &__hours {
+        color: var(--primary-text-color);
+        line-height: 1.86;
+    }
 
-.workingTime-list__hours {
-    color: #ABABAB;
-}
+    &__hours {
+        color: #ABABAB;
+    }
 
-.workingTime-list::after {
-    display: block;
-    content: '';
-    height: 1px;
-    background-color: #E1E1E1;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    &::after {
+        display: block;
+        content: '';
+        height: 1px;
+        background-color: #E1E1E1;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        @include tablet {
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+        
+        @include desktop {
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+    }
 }
-
 .contacts-list__link {
     color: var(--primary-text-color);
     text-decoration: none;
@@ -146,4 +178,14 @@
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    @include tablet {
+        flex-direction: row;
+    }
+                
+    @include desktop {
+        flex-direction: row;
+    }
+}
+.contact-button__svg{
+    margin-left: 6px;
 }

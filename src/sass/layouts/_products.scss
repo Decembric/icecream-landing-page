@@ -136,7 +136,6 @@
   }
 }
 
-<<<<<<< HEAD
 .product-list__item::before {
   content: '';
   position: absolute;
@@ -148,9 +147,6 @@
   height: 200px;
   width: 200px;
   border-radius: 50%;
-=======
-.product-list__item:nth-child(1):before{
->>>>>>> a94da9b (add css)
   background-image: url(../images/ice-cream.jpg);
   @include retina{
     background-image: url(../images/ice-cream-x2.jpg);

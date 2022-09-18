@@ -598,6 +598,11 @@ body {
   bottom: -53;
   z-index: 2;
 
+  animation-name: slide;
+  animation-duration: 0.7s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: 4;
+
   @include tablet {
     left: 370;
     bottom: -56;
@@ -614,6 +619,18 @@ body {
   bottom: 0;
   z-index: 1;
   width: 100%;
+
+  animation-name: slide;
+  animation-duration: 0.7s;
+
+  @keyframes slide {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
 
   @include tablet {
     z-index: -2;

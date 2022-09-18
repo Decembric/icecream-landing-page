@@ -1,0 +1,105 @@
+
+// кнопка звачайна
+.button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--hover-text-color);
+    border: none;
+    padding: 12px 34px;
+    outline: none;
+
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.29;
+
+    transition: color 250ms var(--cubic), 
+                border-color 250ms var(--cubic), 
+                fill 250ms var(--cubic);
+
+    &:hover {
+        background-color: var(--primary-button-color);
+    }
+
+    &:focus {
+        background-color: var(--primary-button-color);
+        color: var(--main-text-color);
+        fill: var(--main-text-color);
+    }
+
+    &:disabled {
+        color: var(--primary-text-color);
+        background-color: var(--primary-inactive-color);
+    }
+}
+// кнопка з пустим фоном
+.button--secondary {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 34px;
+    border: 2px solid var(--hover-text-color);
+    border-radius: 10px;
+    outline: none;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+
+    transition: color 250ms var(--cubic), 
+                border-color 250ms var(--cubic), 
+                fill 250ms var(--cubic);
+
+    &:hover {
+        border-color: var(--primary-button-color);
+
+    }
+
+    &:focus {
+        color: var(--main-text-color);
+        border-color: var(--primary-button-color);
+        fill: var(--main-text-color);
+    }
+
+    &:disabled {
+        border-color: var(--primary-inactive-color);
+        color: var(--primary-text-color);
+    }
+}
+// кнопка без рамки(сам текст)
+.button--borderless {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 11px 9px;
+
+    color: var(--hover-text-color);
+    text-decoration-line: underline;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+
+    transition: color 250ms var(--cubic);
+
+    &:hover {
+        color: var(--primary-button-color);
+    }
+
+    &:focus {
+        color: var(--main-text-color);
+    }
+
+    &:disabled {
+        color: var(--primary-inactive-color);
+    }
+}

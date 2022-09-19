@@ -80,13 +80,14 @@
     @media screen and (min-width:768px) {
     margin-bottom: 16px;
     }
+}
 
-    &__comment {
+.form-shop__comment {
     margin-bottom: 24px; 
     @media screen and (min-width:768px) {
     margin-bottom: 32px;
     }
-    }
+
     & input,
     & textarea {
     width: 100%;

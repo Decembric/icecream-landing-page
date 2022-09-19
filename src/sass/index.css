@@ -433,6 +433,115 @@ address {
   color: #FCFCFC;
 }
 
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+/* .backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+} */
+.howitsmade {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 280px;
+  height: auto;
+  padding: 28px;
+  background: #FCFCFC;
+  border: 2px solid #F8D24E;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .howitsmade {
+    width: 568px;
+    padding: 32px 60px;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .btn-close {
+    top: 24px;
+    right: 24px;
+  }
+}
+
+.howitsmade__title {
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-family: "Seymour One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #131313;
+}
+@media screen and (min-width: 768px) {
+  .howitsmade__title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    max-width: 322px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.howitsmade__container {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+@media screen and (min-width: 768px) {
+  .howitsmade__container {
+    margin-bottom: 32px;
+  }
+}
+
+.howitsmade iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.howitsmade__text {
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #131313;
+}
+@media screen and (min-width: 768px) {
+  .howitsmade__text {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
 .icecream-shop {
   position: absolute;
   top: 50%;
@@ -493,8 +602,7 @@ address {
     text-align: center;
   }
 }
-
-.icecream-shop__text {
+.icecream-shop__title__text {
   margin-bottom: 24px;
   font-family: "Montserrat";
   font-style: normal;
@@ -504,12 +612,12 @@ address {
   color: #131313;
 }
 @media screen and (min-width: 768px) {
-  .icecream-shop__text {
+  .icecream-shop__title__text {
     margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 768px) {
-  .icecream-shop__text {
+  .icecream-shop__title__text {
     font-size: 16px;
     text-align: justify;
   }
@@ -532,9 +640,7 @@ address {
     margin-bottom: 32px;
   }
 }
-
-.form-shop input,
-.form-shop textarea {
+.form-shop__comment input, .form-shop__comment textarea {
   width: 100%;
   padding: 8px 12px;
   background: rgba(248, 210, 78, 0.1);
@@ -548,8 +654,7 @@ address {
   color: #131313;
 }
 @media screen and (min-width: 768px) {
-  .form-shop input,
-.form-shop textarea {
+  .form-shop__comment input, .form-shop__comment textarea {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -558,13 +663,11 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
-  .form-shop input,
-.form-shop textarea {
+  .form-shop__comment input, .form-shop__comment textarea {
     font-size: 14px;
   }
 }
-
-.form-shop input::-moz-placeholder, .form-shop textarea::-moz-placeholder {
+.form-shop__comment input::-moz-placeholder, .form-shop__comment textarea::-moz-placeholder {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -572,8 +675,7 @@ address {
   line-height: 1.4;
   color: #131313;
 }
-
-.form-shop input:-ms-input-placeholder, .form-shop textarea:-ms-input-placeholder {
+.form-shop__comment input:-ms-input-placeholder, .form-shop__comment textarea:-ms-input-placeholder {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -581,9 +683,7 @@ address {
   line-height: 1.4;
   color: #131313;
 }
-
-.form-shop input::placeholder,
-.form-shop textarea::placeholder {
+.form-shop__comment input::placeholder, .form-shop__comment textarea::placeholder {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -592,47 +692,38 @@ address {
   color: #131313;
 }
 @media screen and (min-width: 768px) {
-  .form-shop input::-moz-placeholder, .form-shop textarea::-moz-placeholder {
+  .form-shop__comment input::-moz-placeholder, .form-shop__comment textarea::-moz-placeholder {
     font-size: 14px;
   }
-  .form-shop input:-ms-input-placeholder, .form-shop textarea:-ms-input-placeholder {
+  .form-shop__comment input:-ms-input-placeholder, .form-shop__comment textarea:-ms-input-placeholder {
     font-size: 14px;
   }
-  .form-shop input::placeholder,
-.form-shop textarea::placeholder {
+  .form-shop__comment input::placeholder, .form-shop__comment textarea::placeholder {
     font-size: 14px;
   }
 }
-
-.form-shop__input:not(:-moz-placeholder-shown):required:valid {
+.form-shop__comment__input:not(:-moz-placeholder-shown):required:valid {
   border-color: #84A178;
   background-color: rgba(248, 210, 78, 0.1);
 }
-
-.form-shop__input:not(:-ms-input-placeholder):required:valid {
+.form-shop__comment__input:not(:-ms-input-placeholder):required:valid {
   border-color: #84A178;
   background-color: rgba(248, 210, 78, 0.1);
 }
-
-.form-shop__input:not(:placeholder-shown):required:valid {
+.form-shop__comment__input:not(:placeholder-shown):required:valid {
   border-color: #84A178;
   background-color: rgba(248, 210, 78, 0.1);
 }
-
-.form-shop__input:not(:-moz-placeholder-shown):required:invalid {
+.form-shop__comment__input:not(:-moz-placeholder-shown):required:invalid {
   border-color: red;
 }
-
-.form-shop__input:not(:-ms-input-placeholder):required:invalid {
+.form-shop__comment__input:not(:-ms-input-placeholder):required:invalid {
   border-color: red;
 }
-
-.form-shop__input:not(:placeholder-shown):required:invalid {
+.form-shop__comment__input:not(:placeholder-shown):required:invalid {
   border-color: red;
 }
-
-.form-shop__input:focus,
-.form-shop__comment:focus {
+.form-shop__comment__input:focus, .form-shop__comment__comment:focus {
   outline: none;
 }
 
@@ -663,11 +754,9 @@ address {
     line-height: 1.2;
   }
 }
-
 .form-button:hover {
   background-color: #0A8817;
 }
-
 .form-button:focus {
   outline: 2px solid #0A8817;
   color: #FCFCFC;

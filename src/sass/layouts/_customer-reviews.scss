@@ -85,7 +85,6 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.86;
-    /* or 26px */
     letter-spacing: 0.04em;
   }
 
@@ -113,6 +112,7 @@ body {
   position: static;
   display: flex;
   gap: 18px;
+  margin-bottom: 0;
 }
 .slider-indicators button {
   width: 12px;

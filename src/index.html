@@ -1,225 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@700&family=Seymour+One&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./sass/index.scss" />
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/hero-header.html"></include>
 
-    <header>
-      <div class="container">
-        <div class="mobile-header">
-          <a class="logo-header" href="index.html"
-            ><picture>
-              <source
-                srcset="
-                  ../src/images/desktop/logo-header.png   1x,
-                  ../src/images/desktop/logo-header2x.png 2x
-                "
-              />
-              <img
-                class="logo-header-img"
-                src="../src/images/desktop/logo-header.png"
-                alt="logo"
-              /> </picture
-          ></a>
-          <button class="header__icon icon-menu is-open" data-menu-open>
-            <svg width="32" height="32">
-              <use href="../src/images/menu.svg#menu"></use>
-            </svg>
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@700&family=Seymour+One&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./sass/index.scss" />
+</head>
 
-        <div class="mobile-menu is-hidden" data-menu>
-          <button class="header__icon icon-close" data-menu-close>
-            <svg width="32" height="32">
-              <use href="../src/images/close.svg#close"></use>
-            </svg>
-          </button>
-          <nav class="header-nav">
-            <ul class="header-nav__list">
-              <li class="header-nav__item">
-                <a class="header-nav__link" href="index.html">Home</a>
-              </li>
-              <li class="header-nav__item">
-                <a class="header-nav__link" href="">How it’s made?</a>
-              </li>
-              <li class="header-nav__item">
-                <a class="header-nav__link" href="">Our products</a>
-              </li>
-              <li class="header-nav__item">
-                <a class="header-nav__link" href="">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <button type="button" class="header-button-mobile">
-            Buy now
-            <svg width="12" height="12" class="header__button-icon">
-              <use href="../src/images/button-arrow.svg#button-arrow"></use>
-            </svg>
-          </button>
-        </div>
-        <button type="button" class="header-button">
-          Buy now
-          <svg width="12" height="12" class="header__button-icon">
-            <use href="../src/images/button-arrow.svg#button-arrow"></use>
-          </svg>
-        </button>
-      </div>
-    </header>
+<body>
+  <!-- ❗️❗️❗️ Add partials like so for every page -->
+  <include src="./partials/hero-header.html"></include>
+  <include src="./partials/products.html"></include>
+  <include src="./partials/about.html"></include>
+  <include src="./partials/advantages.html"></include>
+  <include src="./partials/gallery.html"></include>
+  <include src="./partials/customer-reviews.html"></include>
+  <include src="./partials/contacts.html"></include>
+  <include src="./partials/footer.html"></include>
+  <include src="./partials/modal1.html"></include>
+  <include src="./partials/modal2.html"></include>
+  <include src="./partials/modal3.html"></include>
+  <include src="./partials/modal4.html"></include>
+  <include src="./partials/modal5.html"></include>
 
-    <section class="hero">
-      <div class="container">
-        <div class="hero__mobile">
-          <h1 class="hero__header">
-            ice cream made with <span class="hero__header-part">passion</span>
-          </h1>
-          <div class="hero__button-list">
-            <button class="hero___button-products">Products</button>
-            <button class="hero___button-how">How it’s made?</button>
-          </div>
-        </div>
+  <script src="../mobile-menu.js"></script>
+</body>
 
-        <div class="hero__side-text">
-          <p class="hero__side-p"><div class="hero__side-text-part">16</div> cafes</p>
-          <p class="hero__side-p"><div class="hero__side-text-part">23</div> food trucks</p>
-        </div>
-
-        <div class="hero-info">
-          <picture>
-            <source
-              srcset="
-                ../src/images/desktop/hero-plate.png   1x,
-                ../src/images/desktop/hero-plate2x.png 2x
-              "
-              media="(min-width: 1200px)"
-            />
-            <source
-              srcset="
-                ../src/images/tablet/hero-plate.png   1x,
-                ../src/images/tablet/hero-plate2x.png 2x
-              "
-              media="(min-width: 768px)"
-            />
-
-            <img
-              class="hero-img-plate"
-              src="../src/images/desktop/hero-plate.png"
-              alt="plate with ice-cream"
-            />
-          </picture>
-          <div class="hero-info__block">
-            <p class="hero__info-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et
-            </p>
-            <button class="hero__button-arrow">
-              <!-- <svg width="70" height="16" class="hero__icon-arrow">
-                <use href="../src/images/hero-arrow.svg#hero-arrow"></use>
-              </svg> -->
-            </button>
-          </div>
-        </div>
-
-        <picture class="hero__ice-cream-img">
-          <source
-            srcset="
-              ../src/images/desktop/hero-ice-cream.png   1x,
-              ../src/images/desktop/hero-ice-cream2x.png 2x
-            "
-            media="(min-width: 1200px)"
-          />
-          <source
-            srcset="
-              ../src/images/tablet/hero-ice-cream.png   1x,
-              ../src/images/tablet/hero-ice-cream2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ../src/images/mobile/hero-ice-cream.png   1x,
-              ../src/images/mobile/hero-ice-cream2x.png 2x
-            "
-            media="(max-width: 767px)"
-          />
-          <img
-            class="hero-img-ice-cream"
-            src="../src/images/desktop/hero-ice-cream.png"
-            alt="ice-cream"
-          />
-        </picture>
-
-        <picture class="hero__dots-img">
-          <source
-            srcset="
-              ../src/images/desktop/hero-dots.png   1x,
-              ../src/images/desktop/hero-dots2x.png 2x
-            "
-            media="(min-width: 1200px)"
-          />
-          <source
-            srcset="
-              ../src/images/tablet/hero-dots.png   1x,
-              ../src/images/tablet/hero-dots2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ../src/images/mobile/hero-dots.png   1x,
-              ../src/images/mobile/hero-dots2x.png 2x
-            "
-            media="(max-width: 767px)"
-          />
-          <img
-            class="hero-img-dots"
-            src="../src/images/desktop/hero-dots.png"
-            alt="dots"
-          />
-        </picture>
-      </div>
-    </section>
-
-    <include src="./partials/products.html"></include>
-    <include src="./partials/about.html"></include>
-    <include src="./partials/advantages.html"></include>
-    <include src="./partials/gallery.html"></include>
-    <include src="./partials/customer-reviews.html"></include>
-    <include src="./partials/contacts.html"></include>
-    <include src="./partials/footer.html"></include>
-    <include src="./partials/modal1.html"></include>
-    <include src="./partials/modal2.html"></include>
-    <include src="./partials/modal3.html"></include>
-    <include src="./partials/modal4.html"></include>
-    <include src="./partials/modal5.html"></include>
-
-    <script src="../mobile-menu.js"></script>
-  </body>
 </html>

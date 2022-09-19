@@ -239,7 +239,38 @@
   }
 }
 
-.product-list__btn {
+.hero__button-arrow {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  background-position: center;
+
+  cursor: pointer;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 41px;
+  height: 23px;
+
+  background-image: url(../images/icons.svg#icon-arrow.svg);
+  scale: 1;
+  transition: scale 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-image: url(../images/icons.svg#icon-arrow-hover.svg);
+    width: 51px;
+    height: 23px;
+    scale: 1;
+    transition: scale 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:focus {
+    background-image: url(../images/icons.svg#icon-arrow-focus.svg);
+    width: 52px;
+    height: 23px;
+    scale: 1;
+    transition: scale 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-.btn-icon {
-}
+

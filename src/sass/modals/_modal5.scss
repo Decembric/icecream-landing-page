@@ -29,6 +29,7 @@
     }
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .icecream-shop__title {
@@ -52,11 +53,9 @@
     line-height: 1.4;
     text-align: center;
     }
-
     color: #131313;
-}
 
-.icecream-shop__text {
+    &__text {
     margin-bottom: 24px;
     @media screen and (min-width:768px) {
     margin-bottom: 32px;
@@ -74,22 +73,22 @@
     }
 
     color: #131313;
+    }
 }
-
 .form-shop__field:not(:last-child) {
     margin-bottom: 12px; 
     @media screen and (min-width:768px) {
     margin-bottom: 16px;
     }
-}
-.form-shop__comment {
+
+    &__comment {
     margin-bottom: 24px; 
     @media screen and (min-width:768px) {
     margin-bottom: 32px;
     }
-}
-.form-shop input,
-.form-shop textarea {
+    }
+    & input,
+    & textarea {
     width: 100%;
     padding: 8px 12px; 
 
@@ -113,11 +112,11 @@
     @media screen and (min-width:768px) {
     font-size: 14px;
     }
-
     color: #131313;
-}
-.form-shop input::placeholder,
-.form-shop textarea::placeholder {
+    }
+
+    & input::placeholder,
+    & textarea::placeholder {
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -127,21 +126,22 @@
     @media screen and (min-width:768px) {
     font-size: 14px;
     }
-    
     color: #131313;
-}
+    }
 
-.form-shop__input:not(:placeholder-shown):required:valid {
+    &__input:not(:placeholder-shown):required:valid {
     border-color: #84A178;
     background-color: rgba(248, 210, 78, 0.1);
-}
+    }
 
-.form-shop__input:not(:placeholder-shown):required:invalid {
+    &__input:not(:placeholder-shown):required:invalid {
     border-color: red;
-}
-.form-shop__input:focus,
-.form-shop__comment:focus {
+    }
+
+    &__input:focus,
+    &__comment:focus {
     outline: none;
+    }
 }
 .form-button {
     /* button style */
@@ -169,11 +169,11 @@
     font-size: 14px;
     line-height: 1.2;
     }
-}
-.form-button:hover {
+    &:hover {
     background-color: #0A8817;
-}
-.form-button:focus {
+    }
+    &:focus {
     outline: 2px solid #0A8817;
     color: #FCFCFC;
+    }
 }

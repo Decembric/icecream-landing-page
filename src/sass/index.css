@@ -443,11 +443,6 @@ address {
   opacity: 1;
 }
 
-/* .backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-} */
 .howitsmade {
   position: absolute;
   top: 50%;

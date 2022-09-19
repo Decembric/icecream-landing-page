@@ -11,7 +11,7 @@ padding-bottom: 86px;
         text-transform: uppercase;
         padding-top: 21px;
          padding-bottom: 21px;  
-      @include tablet {
+     @include tablet {
     font-family: "Montserrat";
     
     font-size: 48px;
@@ -31,6 +31,21 @@ padding-bottom: 86px;
     
     color: var(--main-text-color);
     
+    }
+    &-item__mr{
+
+     margin-top: 16px;
+     margin-bottom: 18px;
+    
+      @include tablet {
+     margin-top: 32px;
+     margin-bottom: 16px;
+     }
+     @include desktop {
+          margin-top: 40px;
+         /* margin-bottom: 16px;*/
+          }
+
     }
      &-text{
     
